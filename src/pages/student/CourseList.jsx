@@ -1,0 +1,13 @@
+import React from 'react'
+
+const CourseList = () => {
+  return (
+    <div>
+      <h1>
+        course list page
+      </h1>
+    </div>
+  )
+}
+
+export default CourseList
