@@ -17,6 +17,7 @@ const Home = () => {
     <TestimonialsSection/>
     <CallToAction/>
     <Footer/>
+     
     </div>
   )
 }

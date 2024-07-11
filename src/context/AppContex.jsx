@@ -10,7 +10,7 @@ export const AppContextProvider = (props) => {
  const navigate =useNavigate
   const [allCourses, setAllCourses] = useState([]);
   const [isEducator, setIsEucator] = useState(true);
-
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
 
   const fetchAllCourses = async () => {
     setAllCourses(dummyCourses);
@@ -27,8 +27,14 @@ course.courseRatings.forEach(rating=> {
 return totalRating / course.courseRatings.length
   }
 
+const fetchEnrolledCourses = async () =>{
+  setEnrolledCourses(dummyCourses)
+}
+
+
   useEffect(() => {
-    fetchAllCourses();
+    fetchAllCourses()
+    fetchEnrolledCourses
   }, []);
 
   const value = {
@@ -37,7 +43,9 @@ return totalRating / course.courseRatings.length
     Navigate,
     calculaterating,
     isEducator,
+  
     setIsEucator,
+    enrolledCourses
   };
 
   return (
